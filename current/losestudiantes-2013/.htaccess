@@ -1,5 +1,6 @@
 DirectoryIndex index.html
-Options All -Indexes
+AddOutputFilter INCLUDES .html
+Options All -Indexes +Includes
 ErrorDocument 404 /404.php
 
 # Redirecciones para páginas del sitemap antiguo (2013-ene y aa)
