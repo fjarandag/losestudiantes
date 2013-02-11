@@ -18,8 +18,8 @@ RewriteRule ^reglamentos(.*) /reglas.pdf
 #RewriteRule ^reglamentos_5.php /reglas.pdf
 #RewriteRule ^reglamentos_6.php /reglas.pdf
 
-RewriteRule ^reglas(.*) /reglas.pdf
-#RewriteRule ^reglas.php /reglas.pdf
+RewriteRule ^reglas.php /reglas.pdf
+RewriteRule ^reglas_(.*) /reglas.pdf
 #RewriteRule ^reglas_2.php /reglas.pdf
 #RewriteRule ^reglas_3.php /reglas.pdf
 #RewriteRule ^reglas_4.php /reglas.pdf
