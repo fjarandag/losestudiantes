@@ -1,4 +1,4 @@
-DirectoryIndex index.html index.php
+DirectoryIndex index.html index.htm index.php
 AddOutputFilter INCLUDES .html
 Options All -Indexes +Includes
 ErrorDocument 404 /404.php
@@ -10,17 +10,23 @@ RewriteRule ^boletin.php /boletin.pdf
 RewriteRule ^accion_social.php /caridad.html
 RewriteRule ^enlaces.php /enlaces.html
 RewriteRule ^junta.php /juntadegobierno.html
-RewriteRule ^reglamentos.php /reglas.pdf
-RewriteRule ^reglamentos_2.php /reglas.pdf
-RewriteRule ^reglamentos_3.php /reglas.pdf
-RewriteRule ^reglamentos_4.php /reglas.pdf
-RewriteRule ^reglamentos_5.php /reglas.pdf
-RewriteRule ^reglamentos_6.php /reglas.pdf
-RewriteRule ^reglas.php /reglas.pdf
-RewriteRule ^reglas_2.php /reglas.pdf
-RewriteRule ^reglas_3.php /reglas.pdf
-RewriteRule ^reglas_4.php /reglas.pdf
+RewriteRule ^reglamentos(.*) /reglas.pdf
+#RewriteRule ^reglamentos.php /reglas.pdf
+#RewriteRule ^reglamentos_2.php /reglas.pdf
+#RewriteRule ^reglamentos_3.php /reglas.pdf
+#RewriteRule ^reglamentos_4.php /reglas.pdf
+#RewriteRule ^reglamentos_5.php /reglas.pdf
+#RewriteRule ^reglamentos_6.php /reglas.pdf
+
+RewriteRule ^reglas(.*) /reglas.pdf
+#RewriteRule ^reglas.php /reglas.pdf
+#RewriteRule ^reglas_2.php /reglas.pdf
+#RewriteRule ^reglas_3.php /reglas.pdf
+#RewriteRule ^reglas_4.php /reglas.pdf
 RewriteRule ^info_basica.php /contacto.html
+RewriteRule ^inscripcion.php /contacto.html
+RewriteRule ^videos.php /multimedia.html
+RewriteRule ^imagenes.php /titularesa.html
 
 RewriteRule ^imagenes_cristo.php /titularesa.html
 RewriteRule ^imagenes_virgen.php /titularesb.html
@@ -34,46 +40,43 @@ Redirect /cofradia_ceroferarios.php /old/cofradia_ceroferarios.php
 #Redirect /cofradia_concierto.php /old/cofradia_concierto.php
 Redirect /cofradia_costaleros.php /old/cofradia_costaleros.php
 Redirect /estrenos.php /old/estrenos.php
-Redirect /cofradia_info.php /old/cofradia_info.php
-Redirect /cofradia_insignias.php /old/cofradia_insignias.php
-Redirect /cofradia_itinerario.php /old/cofradia_itinerario.php
-Redirect /cofradia_mantilla.php /old/cofradia_mantilla.php
-Redirect /cofradia_musica.php /old/cofradia_musica.php
-Redirect /cofradia_nazarenos.php /old/cofradia_nazarenos.php
-Redirect /cofradia_paso_cristo.php /old/cofradia_paso_cristo.php
-Redirect /cofradia_paso_virgen.php /old/cofradia_paso_virgen.php
-Redirect /cofradia_viacrucis.php /old/cofradia_viacrucis.php
+RewriteRule ^cofradia(.*) /old/cofradia$1 [R]
+#Redirect /cofradia_info.php /old/cofradia_info.php
+#Redirect /cofradia_insignias.php /old/cofradia_insignias.php
+#Redirect /cofradia_itinerario.php /old/cofradia_itinerario.php
+#Redirect /cofradia_mantilla.php /old/cofradia_mantilla.php
+#Redirect /cofradia_musica.php /old/cofradia_musica.php
+#Redirect /cofradia_nazarenos.php /old/cofradia_nazarenos.php
+#Redirect /cofradia_paso_cristo.php /old/cofradia_paso_cristo.php
+#Redirect /cofradia_paso_virgen.php /old/cofradia_paso_virgen.php
+#Redirect /cofradia_viacrucis.php /old/cofradia_viacrucis.php
+
 #Redirect /fotos/pregon2006.php /old/fotos/pregon2006.php
 #Redirect /h03_salida2006b.php /old/h03_salida2006b.php
 Redirect /historia.php /old/historia.php
 Redirect /historia_1994.php /old/historia_1994.php
 #Redirect /historia_2.php /old/historia_2.php
 Redirect /historia_2002.php /old/historia_2002.php
-Redirect /imagenes.php /old/imagenes.php
-#Redirect /imagenes_2006_jm1.php /old/imagenes_2006_jm1.php
-#Redirect /imagenes_2006_jm2.php /old/imagenes_2006_jm2.php
-#Redirect /imagenes_2006_jm3.php /old/imagenes_2006_jm3.php
-#Redirect /imagenes_2006_jm4.php /old/imagenes_2006_jm4.php
-#Redirect /imagenes_2006_jm5.php /old/imagenes_2006_jm5.php
-#Redirect /imagenes_2006_o1.php /old/imagenes_2006_o1.php
 Redirect /images/02_hist_enl-1-1.htm /old/images/02_hist_enl-1-1.htm
 Redirect /images/02_hist_enl-3-2.htm /old/images/02_hist_enl-3-2.htm
+Redirect /images/02_hist_enl-2.htm /old/images/02_hist_enl-2.htm
 #Redirect /mapa.php /old/mapa.php
-Redirect /notas/09_manuel_marin_pregonero.php /old/notas/09_manuel_marin_pregonero.php
-Redirect /notas/2005001.htm /old/notas/2005001.htm
-Redirect /notas/200504_abelmoreno.htm /old/notas/200504_abelmoreno.htm
-Redirect /notas/2009_ciclo_formacion.php /old/notas/2009_ciclo_formacion.php
+
+RewriteRule ^notas(.*) /old/notas$1 [R]
+#Redirect /notas/09_manuel_marin_pregonero.php /old/notas/09_manuel_marin_pregonero.php
+#Redirect /notas/2005001.htm /old/notas/2005001.htm
+#Redirect /notas/200504_abelmoreno.htm /old/notas/200504_abelmoreno.htm
+#Redirect /notas/2009_ciclo_formacion.php /old/notas/2009_ciclo_formacion.php
 #(notas rotas)
-Redirect /notas/200505_retiros_anuncio.htm /old/notas/200505_retiros_anuncio.htm
-Redirect /notas/200506_charlas_carta.htm /old/notas/200506_charlas_carta.htm
-Redirect /notas/200506_charlas_programa.htm /old/notas/200506_charlas_programa.htm
-Redirect /notas/200611_esquivias_pregonero_sevilla.htm /old/notas/200611_esquivias_pregonero_sevilla.htm
-Redirect /notas/200710_nuevas_estampas_oraciones.htm /old/notas/200710_nuevas_estampas_oraciones.htm
+#Redirect /notas/200505_retiros_anuncio.htm /old/notas/200505_retiros_anuncio.htm
+#Redirect /notas/200506_charlas_carta.htm /old/notas/200506_charlas_carta.htm
+#Redirect /notas/200506_charlas_programa.htm /old/notas/200506_charlas_programa.htm
+#Redirect /notas/200611_esquivias_pregonero_sevilla.htm /old/notas/200611_esquivias_pregonero_sevilla.htm
+#Redirect /notas/200710_nuevas_estampas_oraciones.htm /old/notas/200710_nuevas_estampas_oraciones.htm
 
 Redirect /noticias.php /old/noticias.php
 Redirect /noticias_mas.php /old/noticias_mas.php
 Redirect /salida2006.php /old/salida2006.php
-#(no incluido en sitemap)
 Redirect /salida2009.php /old/salida2009.php
 
 # Recursos no existentes en la nueva versión (reescribir, no precisa includes)
@@ -86,44 +89,18 @@ RewriteRule ^docs/0902_inscripcion.pdf /old/docs/0902_inscripcion.pdf
 RewriteRule ^docs/0902_pregon_manuel_marin_huelva.pdf /old/docs/0902_pregon_manuel_marin_huelva.pdf
 RewriteRule ^docs/0903_pregon_manuel_marin_lanzada.pdf /old/docs/0903_pregon_manuel_marin_lanzada.pdf
 RewriteRule ^docs/0911_diptico_formacion.pdf /old/docs/0911_diptico_formacion.pdf
+RewriteRule ^docs/0911_cabildocuentas.pdf /old/docs/0911_cabildocuentas.pdf
+RewriteRule ^docs/0911_carta_formacion.pdf /old/docs/0911_carta_formacion.pdf
 RewriteRule ^docs/anuncio_concierto_2007.pdf /old/docs/anuncio_concierto_2007.pdf
 RewriteRule ^docs/anuncio_pregon_2007.pdf /old/docs/anuncio_pregon_2007.pdf
 RewriteRule ^docs/estacion_penitencia_2008.pdf /old/docs/estacion_penitencia_2008.pdf
 RewriteRule ^docs/estampas_2007.pdf /old/docs/estampas_2007.pdf
 RewriteRule ^notas/200504_hnomayor.doc /old/notas/200504_hnomayor.doc
+RewriteRule ^docs/1002_concierto.pdf /old/docs/1002_concierto.pdf
 
-#Rewrites antiguos (pte asimilar)
-RewriteCond %{HTTP_HOST} ^losestudiantes.org$ [OR]
-RewriteCond %{HTTP_HOST} ^www.losestudiantes.org$
-RewriteRule ^h02_hist\.htm$ "http\:\/\/www\.losestudiantes\.org\/historia_1994\.php" [R=301,L]
 
-RewriteCond %{HTTP_HOST} ^losestudiantes.org$ [OR]
-RewriteCond %{HTTP_HOST} ^www.losestudiantes.org$
-RewriteRule ^desa\/\/?(.*)$ "http\:\/\/www\.losestudiantes\.org\/$1" [R=301,L]
-
-RewriteCond %{HTTP_HOST} ^losestudiantes.org$ [OR]
-RewriteCond %{HTTP_HOST} ^www.losestudiantes.org$
-RewriteRule ^h03_imag_c\.htm$ "http\:\/\/www\.losestudiantes\.org\/imagenes_cristo\.php" [R=301,L]
-
-RewriteCond %{HTTP_HOST} ^losestudiantes.org$ [OR]
-RewriteCond %{HTTP_HOST} ^www.losestudiantes.org$
-RewriteRule ^h03_imag_v\.htm$ "http\:\/\/www\.losestudiantes\.org\/imagenes_virgen\.php" [R=301,L]
-
-RewriteCond %{HTTP_HOST} ^losestudiantes.org$ [OR]
-RewriteCond %{HTTP_HOST} ^www.losestudiantes.org$
-RewriteRule ^h05_cultos\.htm$ "http\:\/\/www\.losestudiantes\.org\/calendario\.php" [R=301,L]
-
-RewriteCond %{HTTP_HOST} ^losestudiantes.org$ [OR]
-RewriteCond %{HTTP_HOST} ^www.losestudiantes.org$
-RewriteRule ^h06_accsocial\.htm$ "http\:\/\/www\.losestudiantes\.org\/accion_social\.php" [R=301,L]
-
-RewriteCond %{HTTP_HOST} ^losestudiantes.org$ [OR]
-RewriteCond %{HTTP_HOST} ^www.losestudiantes.org$
-RewriteRule ^index\.htm$ "http\:\/\/www\.losestudiantes\.org\/index\.php" [R=301,L]
-
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^h04_08\.htm$ "http\:\/\/www\.losestudiantes\.org\/cofradia\.php" [R=301,L]
-
-RewriteCond %{HTTP_HOST} ^.*$
-RewriteRule ^h08_reglas_4\.htm$ "http\:\/\/www\.losestudiantes\.org\/reglas_4\.php" [R=301,L]
+# Boletín 2003 y otros. Múltiples páginas
+RewriteRule ^bol2003(.*) /old/bol2003$1 [R]
+RewriteRule ^bol/(.*) /old/bol/$1 [R]
+RewriteRule ^pregon/(.*) /old/pregon/$1 [R]
 
