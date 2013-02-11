@@ -1,4 +1,4 @@
-DirectoryIndex index.html
+DirectoryIndex index.html index.php
 AddOutputFilter INCLUDES .html
 Options All -Indexes +Includes
 ErrorDocument 404 /404.php
